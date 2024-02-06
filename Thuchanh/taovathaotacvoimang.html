@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<label for="input"><i>Sample Screen:</i></label><br>
+<input id="input" type="number">
+<button onclick="add()" type="submit">Add</button>
+<button onclick="display()" type="submit">Display</button>
+<p id="hienthi"></p>
+</body>
+</html>
+<script>
+    var list = []
+    function add() {
+        let num = +document.getElementById("input").value
+        list.push(num)
+        console.log(list)
+    }
+    function display() {
+        let print =""
+        for (let i = 0; i < list.length; i++) {
+            print += "Element "+i+ " = "+list[i] + "<br>"
+            // document.getElementById("hienthi").innerHTML = "Element "+i+ " = "+list[i] + "<br>"
+        }
+        document.getElementById("hienthi").innerHTML = print
+    }
+
+
+</script>
